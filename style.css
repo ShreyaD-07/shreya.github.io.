@@ -1,0 +1,306 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-image: url('https://img.freepik.com/free-photo/abstract-extruded-voronoi-blocks-background-minimal-light-clean-corporate-wall-3d-geometric-surface-illustration-polygonal-elements-displacement_1217-2503.jpg?semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(253, 251, 251);
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    
+    z-index: -1;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(11, 1, 1);
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    margin: 20px;
+  }
+  
+  nav ul li a {
+    color: hsl(210, 25%, 97%);
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+  }
+  
+  nav ul li a:hover {
+    
+    border-radius: 10px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    scroll-snap-align: start;
+    font-size: 1.25rem;
+  }
+  /* Section Frame Style */
+  .section-frame {
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    border: 2px solid #000000; /* Solid black border */
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    margin: 100px auto 50px auto;
+    color: #0c0c0cda; /* White text for contrast */
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    backdrop-filter: blur(6px); /* Glassmorphism blur effect */
+  }
+  .section-frame h2 {
+    font-size: 2.2rem;
+    color: #0f0e0e; /* White heading text */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000000; /* Black underline */
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+  
+  
+  
+  
+  /* About Me Section */
+  #about {
+    
+    text-align: center;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Education Section */
+  .education-section {
+    
+    border-left: 5px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: Center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .education-section h1 {
+    color: #000708;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: Center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .education-box {
+    
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(239, 237, 237, 0.97);
+    color: black;
+    font-size: 1rem;
+  }
+  
+  /* Skills Section */
+  #skills {
+  
+  }
+  
+  .skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .skills-box {
+   
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(247, 244, 244, 0.1);
+    color: black;
+    font-size: 1rem;
+  }
+  .projects {
+    padding: 50px 20px;
+    color:  #000000;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+    color: #2e2e2e;
+  }
+  
+  .project-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Achievements Section */
+  #achievements {
+  }
+  
+  .certificates {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .certificate img {
+    width: 300px;
+    margin: 50px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+  }
+  
+  /* Hobbies Section */
+  #hobbies {
+    
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  /* Contact Section */
+  #contact {
+    
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-icons a img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  form input,
+  form textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+    color: rgb(13, 13, 13);
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0f0e0eea;
+  }
+  
